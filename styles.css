@@ -1,0 +1,111 @@
+h1{
+font-size: 150px;
+}
+
+h2{
+  font-size: 100px;
+}
+
+p{
+  font-size: 60px;
+}
+
+li{
+  font-size: 40px;
+}
+
+.header-mypage {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: #5c636e;
+}
+
+.header-mypage > div{
+  padding: 1em;
+}
+
+.main-mypage {
+  display: grid;
+  grid-auto-rows: minmax(600px, auto);
+}
+
+.main-mypage > div{
+padding: 1em;
+}
+
+#navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-menu > li {
+  float: left;
+}
+
+#navbar-menu > li a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: black;
+}
+
+#navbar-menu > li a:hover {
+  color: red;
+}
+
+#home-mypage {
+background-image: url('pexels-marcelo-chagas-3324442.jpg');
+opacity: 0.7;
+background-size: 100% 100%;
+color: white;
+text-align: center;
+}
+
+#history-mypage{
+background-image: url('pexels-rachel-claire-5864291.jpg');
+opacity: 0.7;
+background-size: 100% 100%;
+color: white;
+text-align: center;
+}
+
+#order{
+background-image: url('pexels-robin-stickel-70497.jpg');
+opacity: 0.7;
+background-size: 100% 100%;
+color: black;
+text-align: center;
+}
+
+img{
+  width: 100%;
+  height: 80%;
+  opacity: 0.5;
+}
+
+.button-login {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*#myDropdownMenu{
+  background-color: white;
+  border: 2px solid #008CBA;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 30px;
+} */
+
+#myDropdownMenu:hover {
+  background-color: #008CBA;
+  color: white;
+}
