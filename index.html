@@ -1,69 +1,116 @@
 <!DOCTYPE html>
 <html  lang="en">
 <head>
-  <title>Grid Test</title>
+  <title>Welcome to Branningan's</title>
+  <link rel="icon" type="FaviconLogo" href="Brannigan's-logos/favicon.ico">
   <link rel="stylesheet" href="styles.css">
-  <script src="myscripts.js"></script>
+
 </head>
 <body>
   <header>
+    <!-- navigation bar-->
   <div class="header-mypage">
-<div id="header-logo">Logo</div>
+<div id="header-logo"><img id="BranniganLogo" src="Brannigan's-logos/Brannigan's-logos_white.png" alt="Brannigan's Logo"></div>
 <div id="header-navbar">
   <ul id="navbar-menu">
     <li><a href="#home-mypage">Home</a></li>
     <li><a href="#history-mypage">About us</a></li>
-    <li><a href="#order">Order online</a></li>
+    <li><a href="#order">Place an order</a></li>
   </ul>
-</div>
-<div>
 </div>
   </div>
 </header>
+<!--main of the page-->
 <main>
   <div class="main-mypage">
+    <!--home of the website-->
     <div id="home-mypage">
       <h1>Welcome to Branningan's</h1>
     </div>
     <div id="order">
+      <div id="order-text">
+        <div id="background-order">
       <h2>Gastro Pub in Dublin</h2>
-      <!-- This is my Login form-->
-      <form id="login-form" action="/action_page.php">
-        <table>
+      <p>Login to order some fantastic burgers!!!</p>
+      <!-- Login form-->
+      <form id="login-form" onsubmit="event.preventDefault(); validateForm();"
         <label for="username">Username:</label><br>
-        <input type="text" value="username" id="username" name="username"/><br>
+        <input type="text" id="username" name="username"/><br>
         <label for="pwd">Password:</label><br>
-        <input type="password" value="password" id="password" name="password"/><br><br>
-        <input type="submit" id="submit" value="login" onclick.validateForm()/>
-      </table>
+        <input type="password" id="password" name="password"/><br><br>
+        <input type="submit" id="submit" value="login"/>
       </form>
-
-      <form>
+    </br></br>
+    <!--burger menu form-->
+      <form id="menu-form" onsubmit="event.preventDefault(); addBurger();">
         <table>
-        <h3>Burgers Size:</h3>
-      <select id="myDropdownItems">
-  <option value="large">Large (150g)</option>
-  <option value="extra-Large">Extra-Large (275g)</option>
-  <option value="supersize"><button type=button onclick="msgHealth()">Supersize (450g)</button></option>
-      </select>
-
-      <input type="number" id="quantity" name="quantity" min="1" max="5"><br>
-      <label for="discount">Discount code:</label><br>
-      <input type="text" id="discount" name="discount">
-      <input type="submit" value="Submit"><br>
-      <label for="totalPrice">Total price:</label><br>
-      <button onclick="getElementById('totalPrice')"></button>
-      <p id=totalPrice></p>
-    </table>
+        <tr>
+            <th>Burger Size</th>
+            <th>Quantity</th>
+            <th>Buy</th>
+        </tr>
+        <tr>
+            <td>
+              <select id="myDropdownItems" name="myDropdownItems" onchange="getItem(this)">
+                <option value="large">Large (150g), 4 euro </option>
+                <option value="extralarge">Extra-Large (275g), 6 euro</option>
+                <option value="supersize">Supersize (450g), 10 euro</option>
+              </select>
+            </td>
+            <td>
+              <input type="number" id="quantity" name="quantity" min="0" max="10">
+            </td>
+            <td>
+            <input type="submit" id="submit" value="Add"/>
+          </td>
+          <td>
+            Total: <output id = "totalPrice" name="totalPrice"></output>
+          </td>
+          </tr>
+        </table>
+      </form>
+    </br>
+    <!--discount form-->
+      <form id="discount-form" onsubmit="event.preventDefault(); getDiscount();">
+          <table>
+            <tr>
+              <th>Do you have a discount code?...look for the white rabbit and you will find the code
+              </th>
+            </tr>
+              <td>
+                  <input type="text" value="discount" id="discount" name="discount">
+                  <input type="submit" value="Submit">
+              </td>
+            </tr>
+          <tr>
+            <td>
+            </td>
+          </tr>
+          </table>
     </form>
+  </div>
     </div>
-
+  </div>
+<!-- Pub History-->
     <div id="history-mypage">
-      <!--<img alt="Our History" src="pexels-rachel-claire-5864291.jpg">-->
       <h2>Our History</h2>
       <p>Branningans historical Dublin pub since 1800</p>
+      <div>
+        <image class="whiteBunny" src="Brannigan's-logos/rabbit-logos_transparent.png" height="80px">
+        <p class="show-discount"> shillelagh </p>
+      </div>
     </div>
   </div>
 </main>
+<!--jquery Library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="jquery.vnm.confettiButton.js"></script>
+<script src="jquery.vnm.confettiButton.min.js"></script>
+
+<!--jquery JS code-->
+
+<script src="myscripts.js"></script>
 </body>
 </html>

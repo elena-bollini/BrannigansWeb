@@ -1,13 +1,13 @@
 h1{
-font-size: 150px;
+font-size: 100px;
 }
 
 h2{
-  font-size: 100px;
+  font-size: 60px;
 }
 
 p{
-  font-size: 60px;
+  font-size: 30px;
 }
 
 li{
@@ -16,14 +16,42 @@ li{
 
 .header-mypage {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 1em;
-  grid-auto-rows: minmax(100px, auto);
-  background-color: #5c636e;
+  grid-auto-rows: minmax(100px, 200px);
+  background-color: #19344d;
 }
 
 .header-mypage > div{
   padding: 1em;
+  align-self: center;
+}
+
+#header-logo{
+  padding-left: 1em;
+}
+
+
+#navbar-menu {
+  list-style-type: none;
+}
+
+#navbar-menu > li {
+  float: left;
+}
+
+#navbar-menu > li a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar-menu > li a:hover {
+  border-style: outset;
+  border-radius: 5px;
+  border-width: thick;
 }
 
 .main-mypage {
@@ -35,55 +63,44 @@ li{
 padding: 1em;
 }
 
-#navbar-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#navbar-menu > li {
-  float: left;
-}
-
-#navbar-menu > li a {
-  display: block;
-  text-align: center;
-  padding: 15px;
-  color: black;
-}
-
-#navbar-menu > li a:hover {
-  color: red;
-}
-
 #home-mypage {
 background-image: url('pexels-marcelo-chagas-3324442.jpg');
-opacity: 0.7;
-background-size: 100% 100%;
+background-size: 100%;
 color: white;
 text-align: center;
 }
 
 #history-mypage{
 background-image: url('pexels-rachel-claire-5864291.jpg');
-opacity: 0.7;
-background-size: 100% 100%;
+background-size: 100%;
 color: white;
 text-align: center;
 }
 
 #order{
 background-image: url('pexels-robin-stickel-70497.jpg');
-opacity: 0.7;
-background-size: 100% 100%;
+background-size: 100%;
 color: black;
 text-align: center;
 }
 
-img{
-  width: 100%;
-  height: 80%;
-  opacity: 0.5;
+#order-text{
+  background-size: 500px 600px;
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 2em;
+  padding:50px;
+}
+
+#background-order{
+  background-color: white;
+  padding: 2em;
+}
+
+#BranniganLogo{
+  height: 150px;
 }
 
 .button-login {
@@ -97,15 +114,29 @@ img{
   cursor: pointer;
 }
 
-/*#myDropdownMenu{
-  background-color: white;
-  border: 2px solid #008CBA;
-  cursor: pointer;
-  border-radius: 8px;
-  font-size: 30px;
-} */
-
 #myDropdownMenu:hover {
   background-color: #008CBA;
   color: white;
+}
+
+.whiteBunny{
+  float: right;
+}
+
+.whiteBunny:hover {
+  background-color: #19344d;
+  border-style: outset;
+  border-radius: 5px;
+  border-width: thick;
+}
+
+.show-discount{
+  display: none;
+  text-shadow: 3px 3px gray;
+  float: right;
+  color: white;
+  font-weight: bolder;
+  border-style: outset;
+  border-radius: 5px;
+  border-width: thick;
 }
