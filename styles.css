@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 h1{
 font-size: 100px;
 }
@@ -18,7 +21,7 @@ li{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 1em;
-  grid-auto-rows: minmax(100px, 200px);
+  grid-auto-rows: minmax(80px, 100px);
   background-color: #19344d;
 }
 
@@ -95,7 +98,7 @@ text-align: center;
 }
 
 #background-order{
-  background-color: white;
+  background: rgb(203 196 196 / 80%);
   padding: 2em;
 }
 
